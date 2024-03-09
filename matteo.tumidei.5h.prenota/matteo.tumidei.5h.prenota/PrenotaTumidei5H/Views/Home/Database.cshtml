@@ -1,0 +1,26 @@
+@model Database
+@{
+    ViewData["Title"] = "Database";
+}
+<
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Email</th>
+                <th>Città</th>
+            </tr>
+        </thead>
+            @{ 
+                foreach( var item in @Model.Utenti)
+                {
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>@item.Cognome</td>
+                            <td>@item.Email</td>
+                            <td>@item.Città</td>
+                        </tr>
+                }
+            }
+    </table>

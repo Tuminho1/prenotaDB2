@@ -1,0 +1,52 @@
+@model PrenotaTumidei.Models.Utente
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Prenota</h2>
+<p>Pronatati qua sotto!</p>
+<form asp-controller="Home" asp-action="Prenotato" method="post">
+
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input type="text" asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cognome"></label>
+        <input type="text" asp-for="Cognome" class="form-control" />
+        <span asp-validation-for="Cognome" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tipo"></label>
+        <select type="text" asp-for="Tipo" class="form-control">
+        <option>Maschio</option>
+        <option>Femmina</option>
+        <option>Non Identificato</option>
+        </select>
+        <span asp-validation-for="Tipo" />
+    </div> 
+    
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input type="text" asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Città"></label>
+        <input type="text" asp-for="Città" class="form-control" />
+        <span asp-validation-for="Città" />
+    </div>
+
+    <div class="form-group">
+        <div asp-validation-summary="All"></div>
+        <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-send"></i> Prenota </button>
+    </div>
+
+</form>
+    

@@ -1,0 +1,35 @@
+@model List<Utente>
+@{
+    ViewData["Title"] = "Prenotato";
+}
+<div class="text-center">
+    <h1 class="display-4">Prenotato</h1>
+    <p>Grazie mille @Model[0].Nome per esserti prenotato da noi!</p>
+    <p>Si sono prenotati in @Model.Count()</p>
+    <table class="table">
+        <thead class="thread-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Città</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                foreach( var item in @Model)
+                {
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>@item.Cognome</td>
+                            <td>@item.Email</td>
+                            <td>@item.Tipo</td>
+                            <td>@item.Città</td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+   
+</div>
